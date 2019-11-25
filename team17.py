@@ -21,17 +21,19 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
     if len(my_history)%10 == 0:
-        return 'b'
+        return 'c'
     if len(my_history)%10 == 1:
-        return 'b'
+        return 'c'
     if len(my_history)%10 == 2:
-        return 'b'
+        return 'c'
     if len(my_history)%10 == 3:
-        return 'b'
+        return 'c'
     if len(my_history)%10 == 4:
-        return 'b'
-    if len(my_history)%10 > 5:
-        play = their_history[-5]
+        return 'c'
+    if len(my_history)&10 == 5:
+        return 'c'
+    if len(my_history)%10 > 6:
+        play = their_history[-6]
         if play == 'c':
             return 'c'
         else:
